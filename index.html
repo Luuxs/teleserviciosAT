@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atención al Cliente - Teleservicios AT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-brand {
+      font-family: 'Montserrat', sans-serif;
+    }
+    /* Efecto Sunburst / Rayos de sol de fondo */
+    .bg-sunburst {
+      background-color: #b91c1c;
+      background-image: repeating-conic-gradient(
+        from 0deg,
+        #dc2626 0deg 15deg,
+        #b91c1c 15deg 30deg
+      );
+    }
+    /* Texto con contorno negro estilo Teleservicios */
+    .text-stroke-black {
+      -webkit-text-stroke: 1.5px black;
+      text-shadow: 2px 3px 0px #000;
+    }
+  </style>
+</head>
+<body class="bg-sunburst min-h-screen text-neutral-900 flex flex-col justify-between p-4 selection:bg-black selection:text-white relative">
+  <!-- Sombra perimetral para oscurecer los bordes -->
+  <div class="fixed inset-0 pointer-events-none bg-radial-gradient from-transparent via-black/20 to-black/80"></div>
+
+  <!-- Contenedor Central -->
+  <main class="w-full max-w-2xl mx-auto my-auto relative z-10 flex flex-col items-center">
+    
+    <!-- Logo y Título -->
+    <header class="text-center mb-6">
+      <div class="flex items-center justify-center gap-2 mb-2">
+        <span class="text-white font-extrabold text-2xl tracking-tight">apuestatotal</span>
+      </div>
+      <p class="text-white/90 text-[10px] tracking-widest font-semibold uppercase mb-3">PARA GANAR, HAY QUE CREER</p>
+      
+      <!-- Título de impacto -->
+      <h1 class="text-4xl sm:text-5xl font-black italic tracking-wide text-amber-400 font-brand text-stroke-black uppercase transform -rotate-1">
+        TELESERVICIOS
+      </h1>
+      <p class="text-white font-bold text-sm sm:text-base mt-2 drop-shadow">
+        Sobrin@, escoge aquí por qué canal deseas atenderte:
+      </p>
+    </header>
+
+    <!-- Grid de Canales estilo Tarjetas Blancas -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 w-full mb-5">
+      
+      <!-- 1. Telegram AAC Bot -->
+      <a href="https://t.me/ApuestaTotalAAC_bot" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-neutral-50 rounded-3xl p-5 flex flex-col items-center justify-between text-center shadow-xl hover:-translate-y-1 transition duration-200 group">
+        <div class="w-16 h-16 rounded-full bg-sky-500 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform mb-3">
+          <svg class="w-9 h-9 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+        </div>
+        <div>
+          <span class="text-xs font-bold text-neutral-800 block">Telegram &gt;</span>
+          <span class="text-[10px] text-neutral-500 font-medium">@ApuestaTotalAAC_bot</span>
+        </div>
+      </a>
+
+      <!-- 2. Facebook Messenger -->
+      <a href="https://m.me/apuestatotaloficial" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-neutral-50 rounded-3xl p-5 flex flex-col items-center justify-between text-center shadow-xl hover:-translate-y-1 transition duration-200 group">
+        <div class="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform mb-3">
+          <svg class="w-9 h-9 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.453 5.518 3.735 7.185V22l3.411-1.872c.907.251 1.868.388 2.854.388 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.037 12.438l-2.651-2.828-5.176 2.828 5.694-6.046 2.716 2.828 5.111-2.828-5.694 6.046z"/></svg>
+        </div>
+        <div>
+          <span class="text-xs font-bold text-neutral-800 block">Messenger &gt;</span>
+          <span class="text-[10px] text-neutral-500 font-medium">Facebook Oficial</span>
+        </div>
+      </a>
+
+      <!-- 3. Instagram Direct -->
+      <a href="https://ig.me/m/apuestatotaloficial" target="_blank" rel="noopener noreferrer" class="bg-white hover:bg-neutral-50 rounded-3xl p-5 flex flex-col items-center justify-between text-center shadow-xl hover:-translate-y-1 transition duration-200 group">
+        <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform mb-3">
+          <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </div>
+        <div>
+          <span class="text-xs font-bold text-neutral-800 block">Instagram &gt;</span>
+          <span class="text-[10px] text-neutral-500 font-medium">Direct Message</span>
+        </div>
+      </a>
+
+      <!-- 4. Correo Oficial -->
+      <div class="bg-white rounded-3xl p-5 flex flex-col items-center justify-between text-center shadow-xl hover:-translate-y-1 transition duration-200">
+        <a href="mailto:atencionalcliente@apuestatotal.com?subject=Consulta%20o%20Reclamo%20-%20Atenci%C3%B3n%20al%20Cliente" class="flex flex-col items-center">
+          <div class="w-16 h-16 rounded-full bg-amber-500 flex items-center justify-center text-white shadow-md mb-3">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <span class="text-xs font-bold text-neutral-800 block">Enviar Correo &gt;</span>
+        </a>
+        <button id="copyEmailBtn" class="mt-2 text-[10px] font-bold text-amber-600 bg-amber-50 hover:bg-amber-100 px-2 py-1 rounded-full border border-amber-200 transition">
+          Copiar dirección
+        </button>
+      </div>
+
+      <!-- 5. Chat en Línea Web (Ocupa 2 columnas en móvil) -->
+      <div class="col-span-2 sm:col-span-2 bg-white rounded-3xl p-5 shadow-xl flex flex-col justify-between">
+        <div class="flex items-center justify-between gap-3 mb-3">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center text-white shadow-md shrink-0">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            </div>
+            <div class="text-left">
+              <span class="text-sm font-bold text-neutral-900 block leading-tight">Chat en línea</span>
+              <span class="text-xs text-neutral-500 font-medium">www.apuestatotal.com</span>
+            </div>
+          </div>
+          <a href="https://www.apuestatotal.com" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 active:scale-95 text-white text-xs font-bold rounded-xl transition shadow">
+            Abrir Web &gt;
+          </a>
+        </div>
+
+        <!-- Botón acordeón con pasos -->
+        <button id="toggleGuideBtn" class="w-full text-left text-xs text-neutral-600 hover:text-neutral-900 font-semibold bg-neutral-100 hover:bg-neutral-200/80 p-2.5 rounded-xl flex items-center justify-between transition">
+          <span>💡 ¿Cómo encontrar el chat? Ver pasos</span>
+          <svg id="guideArrow" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+
+        <div id="guideContent" class="hidden mt-3 p-3 bg-neutral-50 border border-neutral-200 rounded-xl text-xs text-neutral-700 space-y-1.5 text-left">
+          <p><b>1.</b> Ve a <a href="https://www.apuestatotal.com" target="_blank" class="text-red-600 underline">apuestatotal.com</a>.</p>
+          <p><b>2.</b> Haz clic en el botón flotante rojo <b>"Chat"</b> (esquina inferior izquierda).</p>
+          <p><b>3.</b> Ingresa tu Nombre, Correo y haz clic en <b>"Continuar"</b>.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Banner inferior estilo Teleservicios -->
+    <div class="w-full bg-black/60 backdrop-blur-md border border-white/20 rounded-2xl p-3 text-center flex flex-col sm:flex-row items-center justify-between gap-3 text-white text-xs">
+      <span>Escríbenos por el canal que prefieras y con gusto revisaremos tu caso. 💙</span>
+      <button id="openQrBtn" class="px-3.5 py-1.5 bg-neutral-800 hover:bg-neutral-700 border border-neutral-600 rounded-xl font-bold transition shrink-0 active:scale-95">
+        📱 Ver Código QR
+      </button>
+    </div>
+
+  </main>
+
+  <!-- MODAL CÓDIGO QR -->
+  <div id="qrModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-3xl p-6 w-full max-w-xs text-center relative shadow-2xl">
+      <button id="closeQrBtn" class="absolute top-4 right-4 p-1.5 text-neutral-400 hover:text-neutral-800 rounded-full hover:bg-neutral-100 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <h3 class="text-base font-bold text-neutral-900 mb-1">Escanea este código</h3>
+      <p class="text-xs text-neutral-500 mb-4">Accede a los canales de atención</p>
+      <div class="bg-neutral-50 p-3 rounded-2xl inline-block border mb-4">
+        <canvas id="qrCanvas" class="w-44 h-44 block"></canvas>
+      </div>
+      <button id="downloadQrBtn" class="w-full py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl transition">
+        Descargar Imagen QR
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-4 py-2 rounded-full shadow-2xl opacity-0 pointer-events-none transition-all duration-300 z-50">
+    <span id="toastMsg">Copiado al portapapeles</span>
+  </div>
+
+  <script>
+    // Acordeón de pasos
+    const toggleGuideBtn = document.getElementById('toggleGuideBtn');
+    const guideContent = document.getElementById('guideContent');
+    const guideArrow = document.getElementById('guideArrow');
+    toggleGuideBtn.addEventListener('click', () => {
+      const isHidden = guideContent.classList.toggle('hidden');
+      guideArrow.classList.toggle('rotate-180', !isHidden);
+    });
+
+    // Copiar correo
+    const copyEmailBtn = document.getElementById('copyEmailBtn');
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
+    function showToast(msg) {
+      toastMsg.textContent = msg;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      setTimeout(() => toast.classList.add('opacity-0', 'pointer-events-none'), 2200);
+    }
+    copyEmailBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText('atencionalcliente@apuestatotal.com').then(() => {
+        showToast('¡Correo copiado!');
+      });
+    });
+
+    // Modal QR
+    const qrModal = document.getElementById('qrModal');
+    const qrCanvas = document.getElementById('qrCanvas');
+    document.getElementById('openQrBtn').addEventListener('click', () => {
+      QRCode.toCanvas(qrCanvas, window.location.href, { width: 176, margin: 1 });
+      qrModal.classList.remove('hidden');
+    });
+    document.getElementById('closeQrBtn').addEventListener('click', () => qrModal.classList.add('hidden'));
+    document.getElementById('downloadQrBtn').addEventListener('click', () => {
+      const a = document.createElement('a');
+      a.download = 'QR-Teleservicios-Canales.png';
+      a.href = qrCanvas.toDataURL();
+      a.click();
+    });
+  </script>
+</body>
+</html>
