@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atención al Cliente - Teleservicios AT</title>
+  <title>Atención al Cliente - Apuesta Total</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -16,7 +15,7 @@
     .font-brand {
       font-family: 'Montserrat', sans-serif;
     }
-    /* Efecto Sunburst / Rayos de sol de fondo */
+    /* Efecto Sunburst / Rayos de fondo */
     .bg-sunburst {
       background-color: #b91c1c;
       background-image: repeating-conic-gradient(
@@ -25,7 +24,7 @@
         #b91c1c 15deg 30deg
       );
     }
-    /* Texto con contorno negro estilo Teleservicios */
+    /* Tipografía con contorno negro de impacto */
     .text-stroke-black {
       -webkit-text-stroke: 1.5px black;
       text-shadow: 2px 3px 0px #000;
@@ -33,7 +32,7 @@
   </style>
 </head>
 <body class="bg-sunburst min-h-screen text-neutral-900 flex flex-col justify-between p-4 selection:bg-black selection:text-white relative">
-  <!-- Sombra perimetral para oscurecer los bordes -->
+  <!-- Viñeta perimetral oscura -->
   <div class="fixed inset-0 pointer-events-none bg-radial-gradient from-transparent via-black/20 to-black/80"></div>
 
   <!-- Contenedor Central -->
@@ -47,7 +46,7 @@
       <p class="text-white/90 text-[10px] tracking-widest font-semibold uppercase mb-3">PARA GANAR, HAY QUE CREER</p>
       
       <!-- Título de impacto -->
-      <h1 class="text-4xl sm:text-5xl font-black italic tracking-wide text-amber-400 font-brand text-stroke-black uppercase transform -rotate-1">
+      <h1 class="text-3xl sm:text-5xl font-black italic tracking-wide text-amber-400 font-brand text-stroke-black uppercase transform -rotate-1 leading-tight">
         ATENCIÓN AL CLIENTE
       </h1>
       <p class="text-white font-bold text-sm sm:text-base mt-2 drop-shadow">
@@ -99,13 +98,15 @@
           </div>
           <span class="text-xs font-bold text-neutral-800 block">Enviar Correo &gt;</span>
         </a>
-        <button id="copyEmailBtn" class="mt-2 text-[10px] font-bold text-amber-600 bg-amber-50 hover:bg-amber-100 px-2 py-1 rounded-full border border-amber-200 transition">
+        <button id="copyEmailBtn" class="mt-2 text-[10px] font-bold text-amber-600 bg-amber-50 hover:bg-amber-100 px-2.5 py-1 rounded-full border border-amber-200 transition">
           Copiar dirección
         </button>
       </div>
 
-      <!-- 5. Chat en Línea Web (Ocupa 2 columnas en móvil) -->
+      <!-- 5. Chat en Línea Web (CON GUÍA VISUAL PREMIUM DESPLEGABLE) -->
       <div class="col-span-2 sm:col-span-2 bg-white rounded-3xl p-5 shadow-xl flex flex-col justify-between">
+        
+        <!-- Cabecera de la tarjeta Chat -->
         <div class="flex items-center justify-between gap-3 mb-3">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center text-white shadow-md shrink-0">
@@ -116,22 +117,103 @@
               <span class="text-xs text-neutral-500 font-medium">www.apuestatotal.com</span>
             </div>
           </div>
-          <a href="https://www.apuestatotal.com" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 bg-red-600 hover:bg-red-700 active:scale-95 text-white text-xs font-bold rounded-xl transition shadow">
+          <a href="https://www.apuestatotal.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-red-600 hover:bg-red-700 active:scale-95 text-white text-xs font-bold rounded-xl transition shadow">
             Abrir Web &gt;
           </a>
         </div>
 
-        <!-- Botón acordeón con pasos -->
-        <button id="toggleGuideBtn" class="w-full text-left text-xs text-neutral-600 hover:text-neutral-900 font-semibold bg-neutral-100 hover:bg-neutral-200/80 p-2.5 rounded-xl flex items-center justify-between transition">
-          <span>💡 ¿Cómo encontrar el chat? Ver pasos</span>
-          <svg id="guideArrow" class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        <!-- Botón acordeón interactivo -->
+        <button id="toggleGuideBtn" class="w-full text-left text-xs font-bold text-neutral-700 hover:text-neutral-900 bg-neutral-100 hover:bg-neutral-200/80 p-3 rounded-2xl flex items-center justify-between transition border border-neutral-200/80 shadow-sm">
+          <span class="flex items-center gap-2">
+            <span class="w-5 h-5 rounded-lg bg-red-600 text-white flex items-center justify-center text-[10px] font-bold">✓</span>
+            <span>¿Cómo encontrar el chat? Ver pasos visuales</span>
+          </span>
+          <svg id="guideArrow" class="w-4 h-4 text-neutral-500 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
         </button>
 
-        <div id="guideContent" class="hidden mt-3 p-3 bg-neutral-50 border border-neutral-200 rounded-xl text-xs text-neutral-700 space-y-1.5 text-left">
-          <p><b>1.</b> Ve a <a href="https://www.apuestatotal.com" target="_blank" class="text-red-600 underline">apuestatotal.com</a>.</p>
-          <p><b>2.</b> Haz clic en el botón flotante rojo <b>"Chat"</b> (esquina inferior izquierda).</p>
-          <p><b>3.</b> Ingresa tu Nombre, Correo y haz clic en <b>"Continuar"</b>.</p>
+        <!-- DESPLIEGUE VISUAL ESTILIZADO (Stepper / Mini Mockup) -->
+        <div id="guideContent" class="hidden mt-3.5 pt-3.5 border-t border-neutral-100 text-left">
+          
+          <div class="relative pl-6 space-y-4 before:content-[''] before:absolute before:left-3 before:top-2 before:bottom-3 before:w-0.5 before:bg-gradient-to-b before:from-red-500 before:via-neutral-300 before:to-red-500">
+            
+            <!-- Paso 1 -->
+            <div class="relative">
+              <span class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-red-600 text-white font-extrabold text-[11px] flex items-center justify-center shadow-md ring-4 ring-white">1</span>
+              <div class="bg-neutral-50 border border-neutral-200/80 rounded-2xl p-3 shadow-sm">
+                <span class="text-[10px] font-extrabold text-neutral-400 uppercase tracking-wider block mb-0.5">Paso 1</span>
+                <p class="text-xs text-neutral-700 font-medium">
+                  Entra desde tu navegador a la web oficial:
+                </p>
+                <div class="mt-1.5 inline-flex items-center gap-1.5 bg-white border border-neutral-200 px-2.5 py-1 rounded-lg text-xs font-bold text-red-600">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <a href="https://www.apuestatotal.com" target="_blank" class="hover:underline">www.apuestatotal.com</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="relative">
+              <span class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-red-600 text-white font-extrabold text-[11px] flex items-center justify-center shadow-md ring-4 ring-white">2</span>
+              <div class="bg-neutral-50 border border-neutral-200/80 rounded-2xl p-3 shadow-sm">
+                <span class="text-[10px] font-extrabold text-neutral-400 uppercase tracking-wider block mb-0.5">Paso 2</span>
+                <p class="text-xs text-neutral-700 font-medium mb-2">
+                  En la <b class="text-neutral-900">esquina inferior izquierda</b>, pulsa el botón flotante:
+                </p>
+                <!-- Réplica interactiva del botón rojo de la web -->
+                <div class="inline-flex items-center gap-2 bg-red-600 text-white px-3.5 py-1.5 rounded-full text-xs font-black shadow-md border border-red-500">
+                  <svg class="w-4 h-4 fill-none stroke-current" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                  <span>Chat</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="relative">
+              <span class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-red-600 text-white font-extrabold text-[11px] flex items-center justify-center shadow-md ring-4 ring-white">3</span>
+              <div class="bg-neutral-50 border border-neutral-200/80 rounded-2xl p-3 shadow-sm">
+                <span class="text-[10px] font-extrabold text-neutral-400 uppercase tracking-wider block mb-1">Paso 3</span>
+                <p class="text-xs text-neutral-700 font-medium mb-2.5">
+                  Se abrirá la ventana emergente. Rellena tus datos:
+                </p>
+                
+                <!-- Mockup visual de las casillas del chat -->
+                <div class="space-y-1.5 max-w-xs">
+                  <div class="bg-white border border-neutral-200 px-2.5 py-1 rounded-lg text-[11px] flex items-center justify-between text-neutral-400">
+                    <span class="flex items-center gap-1.5">👤 Nombre</span>
+                    <span class="text-[9px] text-red-500 font-semibold bg-red-50 px-1 rounded">Obligatorio</span>
+                  </div>
+                  <div class="bg-white border border-neutral-200 px-2.5 py-1 rounded-lg text-[11px] flex items-center justify-between text-neutral-400">
+                    <span class="flex items-center gap-1.5">✉️ Correo</span>
+                    <span class="text-[9px] text-red-500 font-semibold bg-red-50 px-1 rounded">Obligatorio</span>
+                  </div>
+                  <div class="bg-white border border-neutral-200 px-2.5 py-1 rounded-lg text-[11px] flex items-center justify-between text-neutral-400">
+                    <span class="flex items-center gap-1.5">🆔 ID Jugador</span>
+                    <span class="text-[9px] text-neutral-400">Opcional</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="relative">
+              <span class="absolute -left-6 top-0 w-6 h-6 rounded-full bg-red-600 text-white font-extrabold text-[11px] flex items-center justify-center shadow-md ring-4 ring-white">4</span>
+              <div class="bg-neutral-50 border border-neutral-200/80 rounded-2xl p-3 shadow-sm">
+                <span class="text-[10px] font-extrabold text-neutral-400 uppercase tracking-wider block mb-0.5">Paso 4</span>
+                <p class="text-xs text-neutral-700 font-medium mb-2">
+                  Toca el botón rojo para iniciar la conversación:
+                </p>
+                <!-- Botón de continuar estilizado -->
+                <div class="inline-block bg-red-600 text-white px-4 py-1.5 rounded-lg text-xs font-bold shadow-sm">
+                  Continuar
+                </div>
+                <span class="text-[11px] text-neutral-500 block mt-1.5">¡Listo! Un asesor te atenderá en tiempo real. 🧑‍💻</span>
+              </div>
+            </div>
+
+          </div>
+
         </div>
+
       </div>
 
     </div>
@@ -139,8 +221,9 @@
     <!-- Banner inferior estilo Teleservicios -->
     <div class="w-full bg-black/60 backdrop-blur-md border border-white/20 rounded-2xl p-3 text-center flex flex-col sm:flex-row items-center justify-between gap-3 text-white text-xs">
       <span>Escríbenos por el canal que prefieras y con gusto revisaremos tu caso. 💙</span>
-      <button id="openQrBtn" class="px-3.5 py-1.5 bg-neutral-800 hover:bg-neutral-700 border border-neutral-600 rounded-xl font-bold transition shrink-0 active:scale-95">
-        📱 Ver Código QR
+      <button id="openQrBtn" class="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 border border-neutral-600 rounded-xl font-bold transition shrink-0 active:scale-95 flex items-center justify-center gap-2">
+        <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"/></svg>
+        <span>Ver Código QR</span>
       </button>
     </div>
 
@@ -153,59 +236,92 @@
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
       <h3 class="text-base font-bold text-neutral-900 mb-1">Escanea este código</h3>
-      <p class="text-xs text-neutral-500 mb-4">Accede a los canales de atención</p>
-      <div class="bg-neutral-50 p-3 rounded-2xl inline-block border mb-4">
-        <canvas id="qrCanvas" class="w-44 h-44 block"></canvas>
+      <p class="text-xs text-neutral-500 mb-4">Acceso a canales de Atención al Cliente</p>
+      
+      <!-- Contenedor del código QR -->
+      <div class="bg-neutral-50 p-3 rounded-2xl inline-flex items-center justify-center border border-neutral-200 mb-4 shadow-inner">
+        <img id="qrImage" src="" alt="Código QR Canales de Atención" class="w-44 h-44 block rounded-lg object-contain" />
       </div>
-      <button id="downloadQrBtn" class="w-full py-2 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl transition">
+
+      <button id="downloadQrBtn" class="w-full py-2.5 bg-red-600 hover:bg-red-700 active:scale-95 text-white text-xs font-bold rounded-xl transition flex items-center justify-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
         Descargar Imagen QR
       </button>
     </div>
   </div>
 
-  <!-- Toast -->
+  <!-- Toast Notificación -->
   <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-4 py-2 rounded-full shadow-2xl opacity-0 pointer-events-none transition-all duration-300 z-50">
     <span id="toastMsg">Copiado al portapapeles</span>
   </div>
 
   <script>
-    // Acordeón de pasos
+    // 1. Acordeón de pasos de chat
     const toggleGuideBtn = document.getElementById('toggleGuideBtn');
     const guideContent = document.getElementById('guideContent');
     const guideArrow = document.getElementById('guideArrow');
+    
     toggleGuideBtn.addEventListener('click', () => {
       const isHidden = guideContent.classList.toggle('hidden');
       guideArrow.classList.toggle('rotate-180', !isHidden);
     });
 
-    // Copiar correo
+    // 2. Copiar correo
     const copyEmailBtn = document.getElementById('copyEmailBtn');
     const toast = document.getElementById('toast');
     const toastMsg = document.getElementById('toastMsg');
+    
     function showToast(msg) {
       toastMsg.textContent = msg;
       toast.classList.remove('opacity-0', 'pointer-events-none');
       setTimeout(() => toast.classList.add('opacity-0', 'pointer-events-none'), 2200);
     }
+    
     copyEmailBtn.addEventListener('click', () => {
       navigator.clipboard.writeText('atencionalcliente@apuestatotal.com').then(() => {
         showToast('¡Correo copiado!');
       });
     });
 
-    // Modal QR
+    // 3. Modal QR directo con API externa segura
+    const openQrBtn = document.getElementById('openQrBtn');
+    const closeQrBtn = document.getElementById('closeQrBtn');
     const qrModal = document.getElementById('qrModal');
-    const qrCanvas = document.getElementById('qrCanvas');
-    document.getElementById('openQrBtn').addEventListener('click', () => {
-      QRCode.toCanvas(qrCanvas, window.location.href, { width: 176, margin: 1 });
+    const qrImage = document.getElementById('qrImage');
+    const downloadQrBtn = document.getElementById('downloadQrBtn');
+
+    openQrBtn.addEventListener('click', () => {
+      const urlActual = window.location.href.startsWith('http') ? window.location.href : 'https://www.apuestatotal.com';
+      const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(urlActual)}`;
+      qrImage.src = qrApiUrl;
       qrModal.classList.remove('hidden');
     });
-    document.getElementById('closeQrBtn').addEventListener('click', () => qrModal.classList.add('hidden'));
-    document.getElementById('downloadQrBtn').addEventListener('click', () => {
-      const a = document.createElement('a');
-      a.download = 'QR-Teleservicios-Canales.png';
-      a.href = qrCanvas.toDataURL();
-      a.click();
+
+    closeQrBtn.addEventListener('click', () => {
+      qrModal.classList.add('hidden');
+    });
+
+    qrModal.addEventListener('click', (e) => {
+      if (e.target === qrModal) qrModal.classList.add('hidden');
+    });
+
+    // Descarga directa del archivo de imagen
+    downloadQrBtn.addEventListener('click', async () => {
+      try {
+        const response = await fetch(qrImage.src);
+        const blob = await response.blob();
+        const blobUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = blobUrl;
+        a.download = 'QR-Atencion-Al-Cliente.png';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(blobUrl);
+        showToast('QR descargado correctamente');
+      } catch (err) {
+        window.open(qrImage.src, '_blank');
+      }
     });
   </script>
 </body>
